@@ -1,2 +1,11 @@
+# Modelos pesados y resultados
 models/colorization_release_v2.caffemodel
-data/results/
+imgs_out/*.png
+imgs_out/*.jpg
+imgs_out/*.jpeg
+# Notebooks/py cache
+.ipynb_checkpoints/
+__pycache__/
+# SO basura
+.DS_Store
+Thumbs.db
