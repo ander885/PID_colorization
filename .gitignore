@@ -1,9 +1,10 @@
 # Modelos pesados y resultados
 models/colorization_release_v2.caffemodel
 imgs/*_gray.jpg
-imgs_out/*.png
-imgs_out/*.jpg
-imgs_out/*.jpeg
+imgs_out/I*.png
+imgs_out/I*.jpg
+imgs_out/I*.jpeg
+scripts/colorize_dnn.py
 # Notebooks/py cache
 .ipynb_checkpoints/
 __pycache__/
