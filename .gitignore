@@ -1,5 +1,6 @@
 # Modelos pesados y resultados
 models/colorization_release_v2.caffemodel
+imgs/*_gray.jpg
 imgs_out/*.png
 imgs_out/*.jpg
 imgs_out/*.jpeg
