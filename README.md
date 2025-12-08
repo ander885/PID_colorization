@@ -72,6 +72,41 @@ En la carpeta models/ deben estar los ficheros del modelo de Zhang et al.:
 * pts_in_hull.npy
 Estos ficheros no se entrenan en este proyecto: se reutilizan tal cual para la inferencia.
 
+## Modelo preentrenado (.caffemodel)
+
+Este proyecto utiliza el modelo preentrenado de colorización de Zhang et al. en formato Caffe.  
+Por motivos de tamaño, el fichero **`colorization_release_v2.caffemodel` no se incluye en el repositorio** y debe descargarse manualmente.
+
+En la carpeta `models/` ya están:
+
+- `colorization_deploy_v2.prototxt`
+- `pts_in_hull.npy`
+
+Solo falta:
+
+- `colorization_release_v2.caffemodel`
+
+### Cómo conseguir `colorization_release_v2.caffemodel`
+
+1. Buscar el repositorio original de los autores (“**richzhang/colorization**”) o los ejemplos de colorización de OpenCV.
+2. Descargar el fichero `colorization_release_v2.caffemodel` desde esas fuentes oficiales.
+3. Copiarlo a la carpeta `models/` de este proyecto, de forma que la estructura quede:
+
+   ```text
+   PID_colorization/
+   ├── models/
+   │   ├── colorization_deploy_v2.prototxt
+   │   ├── colorization_release_v2.caffemodel   ← (añadir aquí)
+   │   └── pts_in_hull.npy
+   └── ...
+  4. **Alternativa:** Pega esto en una terminal dentro de la carpeta models/ de tu proyecto:
+   ```bash
+   wget -O colorization_release_v2.caffemodel "https://github.com/richzhang/colorization/raw/master/colorization/models/colorization_release_v2.caffemodel"
+   ```
+   Si no te funciona **wget:**
+   ```bash
+   curl -L "https://github.com/richzhang/colorization/raw/master/colorization/models/colorization_release_v2.caffemodel" -o colorization_release_v2.caffemodel
+   ```
 ## Cómo reproducir los experimentos
 ### 1. Ejecutar el Notebook 01 – baseline de colorización
 
